@@ -1,8 +1,11 @@
+import Header from "./components/ui/header/Header"
 
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <h1>React E-Store</h1>
+      <>
+        <Header/>
+      </>
   )
 }
 
