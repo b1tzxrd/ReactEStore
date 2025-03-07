@@ -1,0 +1,169 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Grand Theft Auto V PS5",
+      "platform": "ps",
+      "colorPalette": "blue",
+      "genre": "Action",
+      "language": "Английский с русскими субтитрами",
+      "publisher": "RockStarGames",
+      "ageLimit": "18+",
+      "version": "Стандартное издание",
+      "description": "Лос-Сантос – город солнца, старлеток и вышедших в тираж звезд. Некогда предмет зависти всего западного мира, ныне это пристанище дрянных реалити-шоу, задыхающееся в тисках экономических проблем. В центре всей заварухи – троица совершенно разных преступников, отчаянно пытающихся ухватить удачу за хвост в непрекращающейся борьбе за место под солнцем. Бывший член уличной банды Франклин старается завязать с прошлым. Отошедший от дел грабитель банков Майкл обнаруживает, что в честной жизни все не так радужно, как представлялось. Повернутый на насилии псих Тревор перебивается от одного дельца к другому в надежде сорвать крупный куш. Исчерпав варианты, эти трое ставят на кон собственные жизни и учиняют серию дерзких ограблений, в которых – или пан, или пропал. В Grand Theft Auto V поклонников ждет не просто самый огромный и детализированный мир из когда-либо создававшихся Rockstar Games, но и возможность влиять на жизнь и поступки сразу трех главных героев. Такое переплетение историй нескольких персонажей позволит сделать игру максимально увлекательной и захватывающей. Все атрибуты знаменитой серии в полной мере присущи и Grand Theft Auto V – здесь и невероятное внимание к деталям, и фирменный черный юмор, и высмеивание поп-культуры, и даже совершенно новый, невероятно амбициозный мультиплеерный режим.",
+      "price": 37990,
+      "image": "/assets/gta5ps5.webp",
+      "gallery": [
+        "/assets/gta-pics-one.jpg",
+        "/assets/gta-pics-two.jpg",
+        "/assets/gta-pics-three.jpg",
+        "/assets/gta-pics-four.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Ghost of Tsushima PS5",
+      "platform": "ps",
+      "colorPalette": "blue",
+      "genre": "Action",
+      "language": "Русский",
+      "publisher": "Sucker Punch Productions, Nixxes Software BV",
+      "ageLimit": "18+",
+      "version": "Стандартное издание",
+      "description": "Конец XIII века. Монгольская империя опустошила уже не одно государство и стремится покорить весь Восток. От внутренних территорий Японии захватчиков отделяет лишь остров Цусима. Первая волна монгольского вторжения вот-вот разорит остров, но отважный самурай Дзин Сакай готов пойти на всё, чтобы защитить родную землю. Режиссёрская версия — это максимально полный вариант игры «Призрак Цусимы» со всеми вышедшими дополнительными материалами.",
+      "price": 37990,
+      "image": "/assets/ghost.webp",
+      "gallery": [
+        "/assets/ghost-pics-one.jpg",
+        "/assets/ghost-pics-two.jpg",
+        "/assets/ghost-pics-three.jpg",
+        "/assets/ghost-pics-four.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Cyberpunk 2077 PS5",
+      "platform": "ps",
+      "colorPalette": "blue",
+      "genre": "Action/RPG",
+      "language": "Русский",
+      "publisher": "CD Projekt RED, CD Projekt",
+      "ageLimit": "16+",
+      "version": "Стандартное издание",
+      "description": "Загляните в мрачное будущее, где насилие, несправедливость и киберимпланты — не просто обыденность, но и необходимость. Узнайте все о районах, бандах и истории Найт-Сити. Изучите технологии будущего — кибернетику, оружие и транспорт Cyberpunk 2077. Dark Horse Books и CD Projekt Red представляют книгу «Мир игры Cyberpunk 2077», раскрывающую все подробности вселенной этой игры. Из этого красочного захватывающего артбука вы узнаете все об истории, персонажах и мире самой ожидаемой РПГ современности от создателей серии игр «Ведьмак».",
+      "price": 20150,
+      "image": "/assets/cyberpunk_2077.webp",
+      "gallery": [
+        "/assets/cyberpunk-pics-one.jpg",
+        "/assets/cyberpunk-pics-two.jpg",
+        "/assets/cyberpunk-pics-three.jpg",
+        "/assets/cyberpunk-pics-four.jpg"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Rise Of Ronin PS5",
+      "platform": "ps",
+      "colorPalette": "blue",
+      "genre": "Action/RPG",
+      "language": "Английский с русскими субтитрами",
+      "publisher": "CD Projekt RED, CD Projekt",
+      "ageLimit": "18+",
+      "version": "Стандартное издание",
+      "description": "Отправьтесь в увлекательное путешествие по охваченной войной Японии XIX века в ролевом боевике с открытым миром от опытнейших разработчиков из Team NINJA, создателей Nioh и NINJA GAIDEN. Япония, 1863 год. Вот уже три столетия японцы живут под гнетом сёгуната Токугава. Но когда у берегов Японии появляются западные «черные корабли», страну стремительно охватывают беспорядки. Среди хаоса войны, холеры и политических волнений едва не затерялся безвестный воин. Он прокладывает собственный путь, определяя будущее всей Японии. ",
+      "price": 37990,
+      "image": "/assets/ronin.webp",
+      "gallery": [
+        "/assets/ronin-pics-one.jpeg",
+        "/assets/ronin-pics-two.png",
+        "/assets/ronin-pics-three.png",
+        "/assets/ronin-pics-four.png"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Call of duty black ops PS5",
+      "platform": "ps",
+      "colorPalette": "blue",
+      "genre": "Action",
+      "language": "Английский",
+      "publisher": "Activision, Activision Blizzard",
+      "ageLimit": "18+",
+      "version": "Стандартное издание",
+      "description": "Разработанная компаниями Treyarch и Raven игра Call of Duty: Black Ops 6 — это шпионский боевик, действие которого происходит в начале 90-х годов, в период перемен и потрясений в мировой политике, характеризующийся окончанием холодной войны и возвышением Соединённых Штатов как единственной сверхдержавы. Кампания Black Ops 6 предлагает динамичный игровой процесс, который включает в себя разнообразные игровые локации с масштабными декорациями и напряжёнными моментами, ограблениями с высокими ставками и шпионскими операциями. В лучшей в своём классе многопользовательской игре игроки смогут проверить свои навыки на 16 новых картах, включая 12 основных карт 6 на 6 и 4 карты «Удар», на которых можно играть 2 на 2 или 6 на 6. Black Ops 6 также знаменует собой эпическое возвращение режима «Зомби на основе раундов» — любимого фанатами режима, в котором игроки будут сражаться с ордами нежити на двух совершенно новых картах. После запуска игроки смогут рассчитывать на ещё больше возможностей.",
+      "price": 48990,
+      "image": "/assets/call_of_duty_black_ops_6_ps5_1480207.webp",
+      "gallery": [
+        "/assets/call-off-duty-black-ops-6-pics-one.png",
+        "/assets/call-off-duty-black-ops-6-pics-two.png",
+        "/assets/call-off-duty-black-ops-6-pics-three.png",
+        "/assets/call-off-duty-black-ops-6-pics-four.jpg",
+        "/assets/call-off-duty-black-ops-6-pics-five.jpg"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Death Stranding Director's Cut PS5",
+      "platform": "ps",
+      "colorPalette": "blue",
+      "genre": "Action",
+      "language": "Русский",
+      "publisher": "Kojima Productions, 505 Games",
+      "ageLimit": "18+",
+      "version": "Стандартное издание",
+      "description": "Описание Встречайте новую революционную игру от легендарного создателя Хидео Кодзимы – DIRECTOR’S CUT представляет расширенную и обновленную версию игры для PS5. В будущем произошел Выход смерти: исчезла граница между мирами живых и мертвых, и существа из загробного мира наводнили разрушенный мир с расколотым обществом. В роли Сэма Бриджеса ваш долг – объединить последних выживших в расколотой Америке и вернуть людям надежду. Хватит ли у вас сил шаг за шагом восстановить разрушенный мир?",
+      "price": 22990,
+      "image": "/assets/death_stranding_directors_cut_ps5.webp",
+      "gallery": [
+        "/assets/death-stranding-directors-cut-ps5-pics-one.jpg",
+        "/assets/death-stranding-directors-cut-ps5-pics-two.jpg",
+        "/assets/death-stranding-directors-cut-ps5-pics-three.jpg",
+        "/assets/death-stranding-directors-cut-ps5-pics-four.jpg"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "UFC 5 PS5",
+      "platform": "ps",
+      "colorPalette": "blue",
+      "genre": "Action",
+      "language": "Английский",
+      "publisher": "Electronic Arts",
+      "ageLimit": "16+",
+      "version": "Стандартное издание",
+      "description": "Игра EA SPORTS™ UFC® 5 на движке Frostbite™ - это следующее поколение симуляторов поединков. Непревзойдённая графика, новая система вычисления урона и остановка боя по указанию врача, влияющие на игровой процесс и общую реалистичность - это UFC во всей красе.",
+      "price": 15990,
+      "image": "/assets/ufc_5_ps5.webp",
+      "gallery": [
+        "/assets/ufc-5-pics-one.jpg",
+        "/assets/ufc-5-pics-two.jpg",
+        "/assets/ufc-5-pics-three.jpg",
+        "/assets/ufc-5-pics-four.jpg",
+        "/assets/ufc-5-pics-five.jpg",
+        "/assets/ufc-5-pics-six.jpg"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "The Last of Us part I/Одни из нас часть I PS5",
+      "platform": "ps",
+      "colorPalette": "blue",
+      "genre": " Приключенческий экшен",
+      "language": "Русский",
+      "publisher": "Naughty Dog, Iron Galaxy Studios",
+      "ageLimit": "18+",
+      "version": "Стандартное издание",
+      "description": "Ремейк TLOU Часть I: полная версия игры с одиночным сюжетным режимом и отдельной главой-предысторией «Оставшиеся позади» для PS5™. Для поклонников франшизы TLOU, которые хотят заново пережить любимую историю Джоэла и Элли, насладиться улучшенной анимацией, детализированной мимикой персонажей и испытать весь спектр технических особенностей PS5",
+      "price": 37990,
+      "image": "/assets/the_last_of_us_remasteredodni_iz_nas_ps5.webp",
+      "gallery": [
+        "/assets/the-last-of-us-part-1-pics-one.png",
+        "/assets/the-last-of-us-part-1-pics-two.png",
+        "/assets/the-last-of-us-part-1-pics-three.png",
+        "/assets/the-last-of-us-part-1-pics-four.png"
+      ]
+    }
+  ],
+  "cart": [],
+  "favorite": []
+}

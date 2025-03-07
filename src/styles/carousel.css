@@ -1,0 +1,22 @@
+.mySwiper-banner {
+    position: relative;
+}
+
+.swiper-button-nextt {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    right: -7%;
+    /* Расположение стрелочки справа */
+}
+
+.swiper-button-previos {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: -7%;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #2dd4bf;
+}

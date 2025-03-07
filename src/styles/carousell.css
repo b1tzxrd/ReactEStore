@@ -1,0 +1,43 @@
+.mySwiper2 {
+    max-width: 1000px;
+}
+
+.mySwiper {
+    max-width: 1000px;
+}
+
+@media screen and (max-width: 1023px) {
+    .mySwiper2 {
+        max-width: 760px;
+    }
+    .mySwiper {
+        max-width: 760px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .mySwiper2 {
+        max-width: 450px;
+    }
+    .mySwiper {
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .mySwiper2 {
+        max-width: 350px;
+    }
+    .mySwiper {
+        max-width: 350px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .mySwiper2 {
+        max-width: 300px;
+    }
+    .mySwiper {
+        max-width: 300px;
+    }
+}
