@@ -16,9 +16,10 @@ import { HamburgerIcon } from "@chakra-ui/icons/Hamburger"
 import { HStack, IconButton, List } from "@chakra-ui/react"
 import { useColorMode } from "../ui/color-mode"
 // import { color } from "framer-motion"
-import { FaXbox, FaPlaystation, FaLaptopCode } from 'react-icons/fa';
+import { FaXbox, FaPlaystation } from 'react-icons/fa';
 import { NavLink } from "react-router-dom"
 import { LuGamepad2 } from "react-icons/lu"
+import { FaComputer } from "react-icons/fa6"
 // import { chakra } from "@chakra-ui/react"
 
 
@@ -84,7 +85,7 @@ const HeaderBurger: React.FC = () => {
                         <List.Item>
                             <NavLink to="/products/pc" style={isActiveNavLink} >
                                 <HStack onClick={() => setOpen(false)} _hover={{ color: "teal.300", textDecor: "none" }} >
-                                    <FaLaptopCode /> PC
+                                    <FaComputer /> PC
                                 </HStack>
                             </NavLink>
                         </List.Item>

@@ -1,6 +1,6 @@
 import { Container, Grid, GridItem, Image, Text, Heading, Box, HStack, Flex, IconButton, Badge } from "@chakra-ui/react"
 import { Link, useParams } from "react-router-dom"
-import { FaLaptopCode, FaPlaystation, FaXbox } from "react-icons/fa"
+import { FaPlaystation, FaXbox } from "react-icons/fa"
 import { MdFavoriteBorder } from "react-icons/md"
 import { useColorMode } from "@/components/ui/color-mode"
 import { useQuery } from "@tanstack/react-query";
@@ -10,6 +10,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { cartService } from "@/services/cartService"
 import SkeletonCard from "@/components/Skeletons/SkeletonProducts"
 import { LuShoppingCart } from "react-icons/lu"
+import { FaComputer } from "react-icons/fa6"
 
 const Products: React.FC = () => {
 
@@ -73,7 +74,7 @@ const Products: React.FC = () => {
 
                                     <Heading fontSize={{ base: "sm", md: "xl" }} fontWeight="bold" lineHeight="1.2" minH="40px" >{shortText(name, 20)}</Heading>
                                     <HStack>
-                                        <Badge size={{ base: "sm", md: "lg" }} colorPalette={colorPalette} >{platform === "ps" ? <FaPlaystation /> : platform == "xbox" ? <FaXbox /> : <FaLaptopCode />}</Badge>
+                                        <Badge size={{ base: "sm", md: "lg" }} colorPalette={colorPalette} >{platform === "ps" ? <FaPlaystation /> : platform == "xbox" ? <FaXbox /> : <FaComputer />}</Badge>
                                         <Badge size={{ base: "sm", md: "lg" }} colorPalette="teal" fontSize={"xs"}>{shortText(genre, 12)}</Badge>
                                     </HStack>
                                     <Flex justifyContent="space-between" alignItems="center">
