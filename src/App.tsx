@@ -4,6 +4,8 @@ import MainPage from "./components/pages/Main/MainPage"
 import { Route, Routes } from "react-router-dom"
 import SingleProduct from "./components/pages/Products/SingleProduct"
 import Products from "./components/pages/Products/Products"
+import Profile from "./components/pages/Profile/Profile"
+import Checkout from "./components/pages/Checkout/Checkout"
 
 
 
@@ -19,6 +21,8 @@ const App: React.FC = () => {
         <Route path="/single-product/:id" element={<SingleProduct />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:platform" element={<Products />} />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/checkout/:id" element={<Checkout/>} />
       </Routes>
       <Flex as="footer" h="40px" bgColor="bg.panel" alignContent="center" alignItems="center" justifyContent="center" borderTop="1px solid gray">
         <Heading as="h4" color="GrayText" fontWeight="light" fontFamily="monospace" >
