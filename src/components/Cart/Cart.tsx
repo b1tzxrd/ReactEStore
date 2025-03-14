@@ -16,6 +16,11 @@ import useAuth from "@/hooks/useAuth";
 import { useCart } from "@/hooks/useCart";
 import CartItemCard from "./CartItemCard";
 import CartItemCardSkeleton from "../Skeletons/CartItemCardSkeleton";
+import { useNavigate } from "react-router-dom";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { db } from "firebase";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { toaster } from "../ui/toaster";
 
 // const cartItems = [
 //     {
@@ -95,6 +100,9 @@ import CartItemCardSkeleton from "../Skeletons/CartItemCardSkeleton";
 
 const Cart = () => {
 
+    const navigate = useNavigate()
+    const queryClient = useQueryClient();
+
     const {
         cartItems,
         isLoading,
@@ -112,6 +120,37 @@ const Cart = () => {
 
 
     const { user } = useAuth()
+    const { mutate: createOrder } = useMutation({
+        mutationFn: async (selected: boolean) => await handleCheckout(selected),
+        onSuccess: (order) => {
+            queryClient.invalidateQueries({ queryKey: ["cart", user?.uid] });
+            toaster.success({ title: "Заказ создан! Перенаправляем на оплату..." });
+            navigate(`/checkout/${order?.id}`);
+        },
+        onError: (error) => {
+            console.error("Ошибка при создании заказа:", error);
+            toaster.error({ title: "Не удалось создать заказ" });
+        }
+    })
+
+    const handleCheckout = async (selected: boolean) => {
+        const itemsToCheckout = selected
+            ? cartItems.filter(item => selectedItems.includes(item.id))
+            : cartItems;
+
+        if (itemsToCheckout.length === 0) return;
+
+        const createOrder = await addDoc(collection(db, `orders/${user?.uid}/userOrders`), {
+            userId: user?.uid,
+            items: itemsToCheckout,
+            total: selected ? selectedItemsTotalAmount : totalAmount,
+            createdAt: serverTimestamp(),
+            status: "pending"
+        })
+
+        return createOrder
+        // if (createOrder) {navigate(`/checkout/${createOrder.id}`);}
+    }
 
     return (
         <DrawerRoot size="sm">
@@ -163,7 +202,7 @@ const Cart = () => {
                                 gradientFrom="teal.500"
                                 gradientTo="cyan.400" >Ошибка загрузки товаров. Пегезагрузите страницу или попробуйте позже</Heading>
                         ) : isLoading ? (
-                            <CartItemCardSkeleton/>
+                            <CartItemCardSkeleton />
                         )
 
                             : !!user === false ? (
@@ -197,7 +236,8 @@ const Cart = () => {
                                 bgColor="teal.500"
                                 color="white"
                                 size="lg"
-                                w="full"    >
+                                w="full"
+                                onClick={() => createOrder(true)} >
                                 {`Выбрано ${selectedItems.length} шт. К оформлению ${(selectedItemsTotalAmount || 0).toLocaleString()} ₸`}
                             </Button>
                         ) : (
@@ -206,7 +246,8 @@ const Cart = () => {
                                 bgColor="teal.500"
                                 color="white"
                                 size="lg"
-                                w="full"    >
+                                w="full"
+                                onClick={() => createOrder(false)} >
                                 {`К оформлению ${cartItems.length} шт., ${totalAmount.toLocaleString()} ₸`}
                             </Button>
                         )}
@@ -219,19 +260,3 @@ const Cart = () => {
 }
 
 export default Cart
-
-{/* <Button
-                            disabled={cartItems.length === 0 || selectedItems.length === 0}
-                            bgColor="teal.500"
-                            color="white"
-                            size="lg"
-                            w="full"
-                        >
-                            {
-                                visible ? (
-                                    `Выбрано ${selectedItems.length} шт. К оформлению ${(selectedItemsTotalAmount || 0).toLocaleString()} ₸`
-                                ) : (
-                                    `К оформлению ${cartItems.length} шт., ${totalAmount.toLocaleString()} ₸`
-                                )
-                            }
-                        </Button> */}

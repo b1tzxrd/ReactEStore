@@ -12,6 +12,7 @@ import { authService } from '@/services/authService';
 import useAuth from "@/hooks/useAuth";
 import { MdLogout } from "react-icons/md";
 import { Link as RouterLink } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 
 const ChakraRouterLink = chakra(RouterLink)
@@ -49,10 +50,11 @@ const Header: React.FC = () => {
                             {user ? (
                                 <>
                                     <ColorModeToggle />
-                                    {/* <Text>{shortName(user.displayName, 13) || "Без имени"}</Text> */}
-                                    <Avatar.Root bgColor="teal.500" color="white"  variant="solid" size="sm" >
-                                        <Avatar.Fallback name={user?.displayName || "Без имени" }  />
-                                    </Avatar.Root>
+                                    <Link to={"/profile"} >
+                                        <Avatar.Root bgColor="teal.500" color="white" variant="solid" size="sm" >
+                                            <Avatar.Fallback name={user?.displayName || "Без имени"} />
+                                        </Avatar.Root>
+                                    </Link>
                                     <IconButton onClick={() => logout()} bgColor="transparent" color="tomato" variant="solid" size="sm">
                                         <MdLogout />
                                     </IconButton>

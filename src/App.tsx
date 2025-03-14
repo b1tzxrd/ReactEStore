@@ -22,7 +22,7 @@ const App: React.FC = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/products/:platform" element={<Products />} />
         <Route path="/profile" element={<Profile/>} />
-        <Route path="/checkout/:id" element={<Checkout/>} />
+        <Route path="/checkout/:orderId" element={<Checkout/>} />
       </Routes>
       <Flex as="footer" h="40px" bgColor="bg.panel" alignContent="center" alignItems="center" justifyContent="center" borderTop="1px solid gray">
         <Heading as="h4" color="GrayText" fontWeight="light" fontFamily="monospace" >

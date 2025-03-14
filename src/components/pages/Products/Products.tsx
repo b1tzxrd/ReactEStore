@@ -47,11 +47,11 @@ const Products: React.FC = () => {
                     gradientFrom="teal.500"
                     gradientTo="cyan.400"
                     textAlign="center" >
-                    Игры на все платформы
+                    Игры на {platform === "ps" ? "PlayStation" : platform === "xbox" ? "Xbox" : platform === "pc" ? "PC" : "все платформы"}
                 </Heading>
                 <Grid
                     mt={10}
-                    templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }}
+                    templateColumns={{ base: "repeat(2, minmax(150px, 1fr))", md: "repeat(3, 1fr)", lg: "repeat(4, 1fr)" }}
                     gap={{ base: 2, md: 6 }}
                     justifySelf="center"
                     alignItems="center" >
@@ -63,7 +63,7 @@ const Products: React.FC = () => {
                                 </GridItem>
                             ))
                         ) : filterdProducts?.map(({ id, name, platform, genre, colorPalette, price, image }) => (
-                            <GridItem h="100%" maxW={{ base: "150px", sm: "235px", md: "300px" }} key={name} transition="0.2s" _hover={{ transform: "scale(1.05)", transition: "0.2s" }}  >
+                            <GridItem h="100%" minW={"150px"} maxW={{ base: "180px", sm: "300px", md: "300px" }} key={name} transition="0.2s" _hover={{ transform: "scale(1.05)", transition: "0.2s" }}  >
 
                                 <Flex h="100%" flexDir="column" justifyContent="space-between" minH="285px" gap={3} p={1} bgColor={"white"} borderRadius="md" backgroundColor={colorMode === "dark" ? "bg.muted" : "Background"} boxShadow="lg" >
                                     <Flex w="full" justifyContent="center" h={{base: "150px", md: "300px"}} >
@@ -84,7 +84,7 @@ const Products: React.FC = () => {
                                             bgClip="text"
                                             bgGradient="to-r"
                                             gradientFrom="teal.500"
-                                            gradientTo="cyan.400">{price} ₸</Text>
+                                            gradientTo="cyan.400">{price.toLocaleString()} ₸</Text>
                                         <HStack>
                                             <IconButton onClick={() => {
                                                 addToCart({ id: uuidv4(), gameId: id, name, platform, genre, colorPalette, price, image })

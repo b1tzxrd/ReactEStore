@@ -13,10 +13,10 @@ export const getCart = async (userId: string) => {
             ...doc.data()
         }));
 
-        return items as ICartItem[]; // это будет массив игр в корзине
+        return items as ICartItem[];
     } catch (error) {
         console.error("Ошибка при получении корзины:", error);
-        throw error; // можно пробросить дальше или обработать
+        throw error;
     }
 };
 
