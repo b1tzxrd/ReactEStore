@@ -207,11 +207,11 @@ const Checkout = () => {
                     gradientTo="cyan.400" >
                     Оформление заказа
                 </Heading>
-                <HStack justifyContent="space-between" alignItems="flex-start" pt={5} >
-                    <List.Root overflowY="auto" maxH={"660px"} gapY={3} alignItems={"flex-start"} >
+                <HStack flexWrap={"wrap"} justifyContent="space-between" alignItems="flex-start" pt={5} >
+                    <List.Root order={{base: 2, md: 1}} listStyle="none"  overflowY={{sm: "none", md: "scroll"}} maxH={{sm: undefined, md: "660px"}} gapY={3} alignItems={"flex-start"} >
                         {order && order.items.map((item: ICheckoutItem) => (
-                            <List.Item key={item.id} gapX={3} >
-                                <Card.Root w="500px" flexDirection="row" overflow="hidden" size="sm" p={2} >
+                            <List.Item key={item.id} gapX={3} w="full" >
+                                <Card.Root  flexDirection="row" overflow="hidden"  p={2} >
                                     <Image w="150px" rounded="2xl" src={item.image} alt={item.name} />
                                     <Card.Body alignItems="flex-start" justifyContent="center" >
                                         <Card.Title>{item.name}</Card.Title>
@@ -221,7 +221,7 @@ const Checkout = () => {
                             </List.Item>
                         ))}
                     </List.Root>
-                    <Fieldset.Root gap={4} p={5} borderWidth={1} borderRadius="lg" w="400px">
+                    <Fieldset.Root order={{base: 1, md: 2}} gap={4} p={5} borderWidth={1} borderRadius="lg" w="400px">
                         <VStack as="form" onSubmit={handleSubmit(onSubmit)} >
                             <Fieldset.Legend fontSize="lg">Карточные данные</Fieldset.Legend>
                             <Field.Root invalid={!!errors.cardNumber}>
