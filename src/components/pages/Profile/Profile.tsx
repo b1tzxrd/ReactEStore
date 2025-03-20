@@ -40,11 +40,11 @@ const Profile = () => {
     });
 
     useEffect(() => {
-                if (!loading && (user === null ||  error)) {
-                    const timeout = setTimeout(() => { navigate("/") }, 3000)
-                    return () => clearTimeout(timeout)
-                }
-            }, [user, loading, navigate, error])
+        if (!loading && (user === null || error)) {
+            const timeout = setTimeout(() => { navigate("/") }, 3000)
+            return () => clearTimeout(timeout)
+        }
+    }, [user, loading, navigate, error])
 
     if (!loading && !user) {
         return (
@@ -96,7 +96,7 @@ const Profile = () => {
             <Box bgColor="Background">
                 <Container minH="calc(100vh - 70px - 40px)" pt={10} pb={10}>
                     <Heading as="h2" size="5xl" textAlign="center" bgClip="text" bgGradient="to-l" gradientFrom="red.500" gradientTo="orange.400">
-                        Ошибка загрузки 
+                        Ошибка загрузки
                     </Heading>
                 </Container>
             </Box>
@@ -111,9 +111,10 @@ const Profile = () => {
                 </Heading>
                 <VStack gap={5} mt={10} alignItems="center">
                     <Card.Root w="310px" p={5} alignItems="center">
-                        <Avatar.Root bgColor="teal.500" color="white" variant="solid" size="xl" >
+                        {user && <Avatar.Root colorPalette={!user.photoURL ? "teal" : "transparent"} variant="solid" size="sm" >
                             <Avatar.Fallback name={user?.displayName || "Без имени"} />
-                        </Avatar.Root>
+                            {user.photoURL && <Avatar.Image src={user?.photoURL} objectFit={"contain"} />}
+                        </Avatar.Root>}
                         <CardBody textAlign="center">
                             <CardTitle>{user?.displayName || "Без имени"}</CardTitle>
                             <CardDescription>{user?.email}</CardDescription>

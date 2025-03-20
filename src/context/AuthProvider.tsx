@@ -19,7 +19,7 @@ const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const refreshUser = async () => {
         if (auth.currentUser) {
             await auth.currentUser.reload()
-            setUser(auth.currentUser)
+            setUser({...auth.currentUser})
         }
     };
 

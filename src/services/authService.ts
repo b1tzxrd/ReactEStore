@@ -1,5 +1,8 @@
-import { authorizationUser, logoutUser, registerUser } from "@/api/auth"
+import { authorizationUser, logoutUser, registerUser, updateDataUser } from "@/api/auth"
+import { IFormInputs } from "@/components/pages/ProfileEdit/ProfileEdit";
+import useAuth from "@/hooks/useAuth";
 import { useMutation, useQueryClient } from "@tanstack/react-query"
+import { getAuth } from "firebase/auth";
 
 export const authService = {
     // useCurrentUser: () => {
@@ -32,6 +35,25 @@ export const authService = {
             },
         });
     },
+    useUpdateUser: () => {
+        const { refreshUser } = useAuth()
+        const auth = getAuth()
+
+        return useMutation({
+            mutationFn: async (data: Partial<IFormInputs>) => {
+                const user = auth.currentUser
+                if (!user) throw new Error("Пользователь не найден");
+                await updateDataUser(user, data);
+            },
+            onSuccess: async () => {
+                await refreshUser(); // Теперь `user` обновится в AuthContext
+                console.log(getAuth().currentUser)
+            },
+            onError: (error) => {
+                console.error("Ошибка обновления профиля:", error);
+            }
+        });
+    }
 };
 
 
