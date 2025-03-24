@@ -2,10 +2,13 @@
 import useAuth from "@/hooks/useAuth"
 import { authService } from "@/services/authService"
 import { toaster, Toaster } from "@/components/ui/toaster"
-import { Box, Button, Container, Field, Fieldset, Heading, HStack, Input, Stack } from "@chakra-ui/react"
+import { Box, Button, Card, Container, Field, Fieldset, Heading, HStack, Input, Stack } from "@chakra-ui/react"
 import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import { sendEmailVerification } from "firebase/auth"
+import NameEdit from "../Profile/NameEdit"
+import AvatarEdit from "../Profile/AvatarEdit"
+import EmailEdit from "../Profile/EmailEdit"
 
 export interface IFormInputs {
     displayName: string,
@@ -64,7 +67,7 @@ const ProfileEdit: React.FC = () => {
                     gradientTo="cyan.400">
                     Редактирование профиля
                 </Heading>
-                <Fieldset.Root size="lg" maxW="md" m="0 auto" >
+                {/* <Fieldset.Root size="lg" maxW="md" m="0 auto" >
                     <Stack>
                         <Fieldset.Legend > Контактная информация </Fieldset.Legend>
                         <Fieldset.HelperText> Пожалуйста, укажите ниже Ваши контактные данные для их изменения </Fieldset.HelperText>
@@ -140,7 +143,29 @@ const ProfileEdit: React.FC = () => {
                             <Button type="submit" > Изменить данные </Button>
                         </Fieldset.Content>
                     </form>
-                </Fieldset.Root>
+                </Fieldset.Root> */}
+                <NameEdit/>
+                <EmailEdit/>
+                <Card.Root size="md" variant="subtle" mt={4} >
+                    <Card.Header> Ваш пароль </Card.Header>
+                    <Card.Body>
+                        <Field.Root invalid={!!errors.password}>
+                            <Field.Label> Ваш новый Пароль </Field.Label>
+                            <Input
+                                _focus={errors.password ? { outlineColor: "border.error" } : { borderColor: "teal.500", outlineColor: "teal.500" }}
+                                type="password"
+                                {...register("password", {
+                                    minLength: { value: 6, message: "Пароль должен быть не менее 6 символов" }
+                                })}
+                            />
+                            {errors.password && <Field.ErrorText>{errors.password.message}</Field.ErrorText>}
+                        </Field.Root>
+                    </Card.Body>
+                    <Card.Footer>
+                        <Button>Обновить</Button>
+                    </Card.Footer>
+                </Card.Root>
+                <AvatarEdit/>
             </Container>
         </Box>
     )

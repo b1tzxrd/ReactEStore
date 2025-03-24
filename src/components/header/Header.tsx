@@ -53,7 +53,7 @@ const Header: React.FC = () => {
                                     <Link to={"/profile"} >
                                         <Avatar.Root colorPalette={!user.photoURL ? "teal" : "transparent"} variant="solid" size="sm" >
                                             <Avatar.Fallback name={user?.displayName || "Без имени"} />
-                                            {user.photoURL && <Avatar.Image src={user?.photoURL} objectFit={"contain"} />}
+                                            {user.photoURL && <Avatar.Image src={user?.photoURL}  objectFit={"contain"} />}
                                         </Avatar.Root>
                                     </Link>
                                     <IconButton onClick={() => logout()} bgColor="transparent" color="tomato" variant="solid" size="sm">
